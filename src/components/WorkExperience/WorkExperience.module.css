@@ -37,14 +37,15 @@
 
 .header {
     background-color: lightskyblue;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     width: max-content;
     padding: 10px;
     margin-left: 4px;
     cursor: pointer;
 }
 
-.addheader {
+.addHeader {
     margin-left: 4px;
     border: 2px solid lightskyblue;
     border-radius: 20px;
@@ -55,17 +56,19 @@
     cursor: pointer;
 }
 
-.workheader {
+.workHeader {
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 10px;
 }
 
 .addicon {
     color: lightskyblue;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     padding-right: 6px;
     padding-left: 4px;
     cursor: pointer;
 }
+
