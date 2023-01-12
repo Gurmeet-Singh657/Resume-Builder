@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Editor.module.css";
 import BasicInfo from "../BasicInfo/BasicInfo";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import Projects from "../Projects/Projects.js";
 import Education from "../Education/Education.js";
 import Achievements from "../Achievements/Achievements.js";
-import Other from "../Other/Other";
 import Skills from "../Skills/Skills";
 
 function Editor(props) {
@@ -36,10 +35,16 @@ function Editor(props) {
           {activeSectionKey === "Education" && <Education />}
           {activeSectionKey === "Achievements" && <Achievements />}
           {activeSectionKey === "Skills" && <Skills />}
-          {activeSectionKey === "Other" && <Other />}
         </div>
       </div>
-      <button className={styles.btn}>Save</button>
+      <div className={styles.btndiv}>
+        <button
+          className={styles.btn}
+          onClick={() => window.location.reload(false)}
+        >
+          Save
+        </button>
+      </div>
     </>
   );
 }

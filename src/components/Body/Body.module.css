@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .container {
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* justify-content: center; */
     gap: 30px;
     padding-top: 0;
     /* width: 2000px; */
@@ -11,6 +14,7 @@
 .heading {
     font-weight: 500;
     font-size: 2.1rem;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .toolbar {
