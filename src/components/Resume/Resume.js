@@ -19,32 +19,32 @@ const Resume = forwardRef((props, ref) => {
     "Basic Info": {
       id: "Basic Info",
       sectionTitle: "Basic Info",
-      details: JSON.parse(localStorage.getItem("basicInfo")),
+      details: JSON.parse(localStorage.getItem("basicInfo")) || "",
     },
     "Work Experience": {
       id: "Work Experience",
       sectionTitle: "Work Experience",
-      details: JSON.parse(localStorage.getItem("workExp")),
+      details: JSON.parse(localStorage.getItem("workExp")) || "",
     },
     Projects: {
       id: "Projects",
       sectionTitle: "Projects",
-      details: JSON.parse(localStorage.getItem("projects")),
+      details: JSON.parse(localStorage.getItem("projects")) || "",
     },
     Education: {
       id: "Education",
       sectionTitle: "Education",
-      details: JSON.parse(localStorage.getItem("education")),
+      details: JSON.parse(localStorage.getItem("education")) || "",
     },
     Achievements: {
       id: "Achievements",
       sectionTitle: "Achievements",
-      details: JSON.parse(localStorage.getItem("achievements")),
+      details: JSON.parse(localStorage.getItem("achievements")) || "",
     },
     Skills: {
       id: "Skills",
       sectionTitle: "Skills",
-      details: JSON.parse(localStorage.getItem("skills")),
+      details: JSON.parse(localStorage.getItem("skills")) || "",
     },
   };
   const containerRef = useRef();
@@ -84,12 +84,11 @@ const Resume = forwardRef((props, ref) => {
         draggable
         onDragOver={() => seTarget(info.workExp?.id)}
         onDragEnd={() => setSource(info.workExp?.id)}
-        className={`${styles.section} ${
-          info.workExp?.sectionTitle ? "" : styles.hidden
-        }`}
+        className={`${styles.section} ${info.workExp?.sectionTitle ? "" : styles.hidden
+          }`}
       >
-        {info.workExp?.details[0]?.title !== "" &&
-          info.workExp?.details[0]?.companyName != "" &&
+        {info.workExp.details !== "" &&
+          info.workExp?.details[0]?.title !== "" &&
           info.workExp?.details[0]?.companyName != "" &&
           info.workExp?.details[0]?.location != "" &&
           info.workExp?.details[0]?.startDate != "" &&
@@ -161,13 +160,12 @@ const Resume = forwardRef((props, ref) => {
         draggable
         onDragOver={() => seTarget(info.project?.id)}
         onDragEnd={() => setSource(info.project?.id)}
-        className={`${styles.section} ${
-          info.project?.sectionTitle ? "" : styles.hidden
-        }`}
+        className={`${styles.section} ${info.project?.sectionTitle ? "" : styles.hidden
+          }`}
       >
         <div className={styles.sectionTitle}>{info.project.sectionTitle}</div>
         <div className={styles.content}>
-          {info.project?.details?.map((item) => (
+          {info.project.details !== "" && info.project?.details?.map((item) => (
             <div className={styles.item}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
@@ -195,17 +193,6 @@ const Resume = forwardRef((props, ref) => {
               ) : (
                 <span />
               )}
-              {/* {item.points?.length > 0 ? (
-                <ul className={styles.points}>
-                  {item.points?.map((elem, index) => (
-                    <li className={styles.point} key={elem + index}>
-                      {elem}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <span />
-              )} */}
               {item.desc ? (
                 <ul className={styles.points}>
                   {item.desc?.split("\n").map((elem, index) => (
@@ -228,15 +215,14 @@ const Resume = forwardRef((props, ref) => {
         draggable
         onDragOver={() => seTarget(info.education?.id)}
         onDragEnd={() => setSource(info.education?.id)}
-        className={`${styles.section} ${
-          info.education?.sectionTitle ? "" : styles.hidden
-        }`}
+        className={`${styles.section} ${info.education?.sectionTitle ? "" : styles.hidden
+          }`}
       >
         <div className={styles.sectionTitle}>
-          {info.education?.sectionTitle}
+          {info.education.details !== "" && info.education?.sectionTitle}
         </div>
         <div className={styles.content}>
-          {info.education?.details?.map((item) => (
+          {info.education.details!=="" && info.education?.details?.map((item) => (
             <div className={styles.item}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
@@ -274,11 +260,10 @@ const Resume = forwardRef((props, ref) => {
         draggable
         onDragOver={() => seTarget(info.achievement?.id)}
         onDragEnd={() => setSource(info.achievement?.id)}
-        className={`${styles.section} ${
-          info.achievement?.sectionTitle ? "" : styles.hidden
-        }`}
+        className={`${styles.section} ${info.achievement?.sectionTitle ? "" : styles.hidden
+          }`}
       >
-        {info.achievement?.details?.length > 0 && (
+        {info.achievement.details !== "" && info.achievement?.details?.length > 0 && (
           <>
             {" "}
             <div className={styles.sectionTitle}>
@@ -307,13 +292,12 @@ const Resume = forwardRef((props, ref) => {
         draggable
         onDragOver={() => seTarget(info.skill?.id)}
         onDragEnd={() => setSource(info.skill?.id)}
-        className={`${styles.section} ${
-          info.skill?.sectionTitle ? "" : styles.hidden
-        }`}
+        className={`${styles.section} ${info.skill?.sectionTitle ? "" : styles.hidden
+          }`}
       >
         <div className={styles.sectionTitle}>{info.skill?.sectionTitle}</div>
         <div className={styles.content}>
-          {info.skill?.details?.length > 0 ? (
+          {info.skill.details != "" && info.skill?.details?.length > 0 ? (
             <div className={styles.showskills}>
               {info.skill?.details?.map((elem, index) => (
                 <div

@@ -27,34 +27,43 @@ const Body = () => {
       id="colortoolbar"
       onMouseEnter={() => navigate("#colortoolbar")}
     >
-      <p className={styles.heading}>Resume Builder</p>
+      <p className={styles.heading}>Resume Edtior</p>
       <div className={styles.toolbar}>
-        <div
-          className={styles.colors}
-          id="colortoolbar"
-          onMouseEnter={() => navigate("#colortoolbar")}
-        >
-          {colors.map((item) => (
-            <span
-              key={item}
-              style={{ backgroundColor: item, cursor: "pointer" }}
-              className={`${styles.color} ${
-                activeColor === item ? styles.active : ""
-              }`}
-              onClick={() => setActiveColor(item)}
-            />
-          ))}
+        <div className={styles.toolbarbox}>
+          <div
+            className={styles.colors}
+            id="colortoolbar"
+            onMouseEnter={() => navigate("#colortoolbar")}
+          >
+            {colors.map((item) => (
+              <span
+                key={item}
+                style={{ backgroundColor: item, cursor: "pointer" }}
+                className={`${styles.color} ${activeColor === item ? styles.active : ""
+                  }`}
+                onClick={() => setActiveColor(item)}
+              />
+            ))}
+          </div>
+          <div className={styles.colortext}>
+            Color Themes
+          </div>
         </div>
-        <ReactToPrint
-          trigger={() => {
-            return (
-              <button id="download" onMouseEnter={() => navigate("#download")}>
-                Download <ArrowDown />
-              </button>
-            );
-          }}
-          content={() => resumeRef.current}
-        />
+        <div className={styles.download}>
+          <div className={styles.downloadbutton}>
+            <ReactToPrint
+              trigger={() => {
+                return (
+                  <button id="download" onMouseEnter={() => navigate("#download")}>
+                    Download <ArrowDown />
+                  </button>
+                );
+              }}
+              content={() => resumeRef.current}
+            />
+          </div>
+          <div className={styles.downloadText}>Download your Resume</div>
+        </div>
       </div>
       <div className={styles.main}>
         <Editor sections={sections} />

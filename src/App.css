@@ -1,5 +1,12 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.App{
+    display:flex;
+    flex-direction:row;
+}
+
+.Appsidebar{
+    width:15vw;
+}
+
+.AppContent{
+    width:85vw;
 }

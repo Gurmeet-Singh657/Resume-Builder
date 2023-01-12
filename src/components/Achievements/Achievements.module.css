@@ -46,8 +46,8 @@
 }
 
 .achButton:hover{
-position: relative;
-bottom: 2px;
+background-color: rgb(47, 178, 230);
+    color: white;
 }
 
 .achButton:disabled {
@@ -100,4 +100,9 @@ bottom: 2px;
 .text {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.dragdrop{
+    display: flex;
+    justify-content: center;
 }

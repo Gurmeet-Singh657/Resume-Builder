@@ -53,7 +53,7 @@ const Projects = () => {
     setTimeout(() => {
       const data = JSON.stringify(values);
       localStorage.setItem("projects", data);
-    }, 10);
+    }, 1);
   }, [values]);
   const handleDelete = (id) => {
     if (values.length === 1) {
@@ -67,13 +67,13 @@ const Projects = () => {
       {banner && <Banner title="You have added enough Projects !" />}
       <div className={styles.detail}>
         <div className={styles.projectheader}>
-          <button
-            className={styles.addheader}
+          <div
+            className={styles.addHeader}
             onClick={() => IncreaseProjectCount()}
           >
             <span className={styles.addicon}>+</span>
             Add Projects
-          </button>
+          </div>
         </div>
         {values?.map((key, index) => (
           <div className={styles.ProjectBody} key={key}>

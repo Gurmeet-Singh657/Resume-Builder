@@ -7,7 +7,7 @@
     justify-content: space-evenly;
     gap: 30px;
     background-color: rgb(238, 252, 255);
-    min-height: 85vh;
+    height:90vh;
 }
 
 .heading {
@@ -28,4 +28,19 @@
 
 .right img {
     width: 400px;
+}
+
+.headerWarn{
+    background-color: #239ce2;
+    color:white;
+    height:10vh;
+    padding:20px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerWarnKnow{
+    color:white;
+    text-decoration: underline;
 }

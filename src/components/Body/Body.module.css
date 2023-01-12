@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 .container {
+    margin-top: 20px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -12,9 +13,10 @@
 }
 
 .heading {
-    font-weight: 500;
-    font-size: 2.1rem;
-    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    color: #239ce2;
+    font-size: 4rem;
+    font-family: 'Caveat', cursive;
 }
 
 .toolbar {
@@ -68,4 +70,31 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
+}
+
+.toolbarbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colortext {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive;
+}
+
+.download {
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadText {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive;
 }

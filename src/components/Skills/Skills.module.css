@@ -112,6 +112,6 @@
 }
 
 .skillButton:hover {
-    position: relative;
-    bottom: 2px;
+    background-color:rgb(47, 178, 230);
+    color:white;
 }

@@ -63,7 +63,7 @@ const Education = () => {
     setTimeout(() => {
       const data = JSON.stringify(values);
       localStorage.setItem("education", data);
-    }, 10);
+    }, 1);
   }, [values]);
   const handleDelete = (id) => {
     if (values.length === 1) {
@@ -77,13 +77,13 @@ const Education = () => {
       {flag && <Banner title="You have added enough Educations!" />}
       <div className={styles.detail}>
         <div className={styles.educationHeader}>
-          <button
+          <div
             className={styles.addHeader}
             onClick={() => increaseEducationCount()}
           >
             <span className={styles.addIcon}>+</span>
             Add Education
-          </button>
+          </div>
         </div>
         {values?.map((key, index) => (
           <div className={styles.educationBody} key={key}>

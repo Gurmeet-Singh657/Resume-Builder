@@ -83,7 +83,7 @@ const Achievements = () => {
     setTimeout(() => {
       const data = JSON.stringify(achievements);
       localStorage.setItem("achievements", data);
-    }, 10);
+    }, 1);
   }, [achievements]);
   const handleDelete = (id) => {
     setAchievements((current) => current.filter((item, index) => index != id));
@@ -126,12 +126,12 @@ const Achievements = () => {
               onChange={(e) => {
                 setCurrent(e.target.value);
               }}
-              onKeyDown={handleKeyDown} 
+              onKeyDown={handleKeyDown}
             />
             <div className={styles.achAddArea}>
               <button
                 className={styles.achButton}
-                disabled={achievements.length >=8}
+                disabled={achievements.length >= 8}
                 onClick={handleSubmit}
               >
                 Add Achievement
@@ -192,6 +192,11 @@ const Achievements = () => {
           ❌ You have not added any Achievement
         </div>
       )}
+      {achievements.length>0 && 
+        <div className={styles.dragdrop}>
+          Drag and Drop your achievements in the order you want
+        </div>
+      }
     </>
   );
 };

@@ -66,7 +66,7 @@ const WorkExperience = () => {
     setTimeout(() => {
       const data = JSON.stringify(values);
       localStorage.setItem("workExp", data);
-    }, 10);
+    }, 1);
   }, [values]);
   const handleDelete = (id) => {
     if (values.length === 1) {
@@ -81,10 +81,10 @@ const WorkExperience = () => {
       {flag && <Banner title="You have added Enough Work Experiences !" />}
       <div className={styles.detail}>
         <div className={styles.workHeader}>
-          <button className={styles.addHeader} onClick={() => IncreaseWorkCount()}>
+          <div className={styles.addHeader} onClick={() => IncreaseWorkCount()}>
             <span className={styles.addicon}>+</span>
             Add Work Experience
-          </button>
+          </div>
         </div>
         {values?.map((key, index) => (
           <div className={styles.workExpBody} key={key}>

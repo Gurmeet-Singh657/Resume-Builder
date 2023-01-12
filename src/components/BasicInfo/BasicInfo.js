@@ -25,7 +25,7 @@ const BasicInfo = () => {
     setTimeout(() => {
       const data = JSON.stringify(basicInfo);
       localStorage.setItem("basicInfo", data);
-    }, 10);
+    }, 1);
   }, [basicInfo]);
 
   return (

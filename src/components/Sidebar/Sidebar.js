@@ -45,7 +45,7 @@ const Sidebar = () => {
             smooth
           >
             <Icon style={{ width: "10vh" }} icon="gg:toolbar-bottom" />
-            <span>Color Toolbar</span>
+            <span>Color Themes</span>
           </Link>
         </li>
         <li className="navitem">
@@ -56,7 +56,7 @@ const Sidebar = () => {
               setActivenav("download");
               
             }}
-            to="#download"
+            to="#colortoolbar"
             smooth
           >
             <Icon
@@ -100,6 +100,7 @@ const Sidebar = () => {
           </Link>
         </li>
       </ul>
+      <div className="copyright">&copy;&nbsp;Copyright 2023</div>
     </div>
   );
 };

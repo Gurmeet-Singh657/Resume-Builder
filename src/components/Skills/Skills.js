@@ -38,7 +38,7 @@ const Skills = () => {
     setTimeout(() => {
       const data = JSON.stringify(skills);
       localStorage.setItem("skills", data);
-    }, 10);
+    }, 1);
   }, [skills]);
   const handleDelete = (id) => {
     setSkills((current) => current.filter((item, index) => index != id));
