@@ -20,9 +20,9 @@ Introducing cutting-edge Resume Builder App, the ultimate tool for creating a st
 ### Home Page
 ![Home Page ](https://i.imgur.com/vSuCvaJ.png)
 ### Here is the Resume Editor - Add Basic Info , Achievements , Certifications , Skills , Project , Work Experience
-![GoogleMapsIncident](https://i.imgur.com/Pg74heh.png)
+![ResumeEditor](https://i.imgur.com/Pg74heh.png)
 ### Here is the glimpse of my resume - ✨ Looks Amazing !!
-![IncidentForm](https://i.imgur.com/sMoRLr1.png)
+![ResumeView](https://i.imgur.com/sMoRLr1.png)
 
 ## Thank You !!!!
 
